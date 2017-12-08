@@ -4,7 +4,7 @@ services:
 
   traefik:
     image: traefik
-    command: --web --docker
+    command: --web --docker --docker.exposedbydefault=false
     restart: always
     ports:
       - 80:80
