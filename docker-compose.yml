@@ -2,7 +2,6 @@ version: '2'
 
 services:
   traefik:
-#    command: --web --docker
     container_name: traefik
     image: traefik
     restart: always
