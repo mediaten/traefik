@@ -1,21 +1,20 @@
 version: '2'
 
 services:
-
   traefik:
+#    command: --web --docker
+    container_name: traefik
     image: traefik
-    command: --web --docker --docker.exposedbydefault=false
     restart: always
+    networks:
+      - web
     ports:
       - 80:80
       - 443:443
       - 9080:8080
-    networks:
-      - web
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik.toml:/traefik.toml
-    container_name: traefik
 
 networks:
   web:
