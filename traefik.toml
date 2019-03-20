@@ -20,3 +20,5 @@ email = "admin@mediaten.ru"
 storage = "/data/acme.json"
 onHostRule = true
 entryPoint = "https"
+  [acme.httpChallenge]
+  entryPoint = "http"
